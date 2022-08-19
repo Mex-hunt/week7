@@ -77,7 +77,7 @@ jobs:
         - name: Run the image in a container
           uses: addnab/docker-run-action@v3
           with:
-            image: ${{ secrets.DOCKERHUB_USERNAME }}/nmynodeapp:2
+            image: ${{ secrets.DOCKERHUB_USERNAME }} / mynodeapp:2
             run: |
               echo "runing the docker image"
               echo "Testing the nodejs  app endpoints"
