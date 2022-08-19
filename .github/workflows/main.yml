@@ -40,7 +40,7 @@ jobs:
       - name: build the node-app
         run: |
            npm build
-           
+
            npm test
   push_to_Docker_Hub:
       # The type of runner that the job will run on
@@ -62,8 +62,8 @@ jobs:
         - name: Login to DockerHub
           uses: docker/login-action@v1
           with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_TOKEN }}
+            username: ${{ secrets.DOCKER_HUB_USERNAME }}
+            password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN}}
       
         - name: Build and push
           uses: docker/build-push-action@v2
