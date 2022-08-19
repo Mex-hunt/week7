@@ -40,6 +40,7 @@ jobs:
       - name: build the node-app
         run: |
            npm build
+           
            npm test
   push_to_Docker_Hub:
       # The type of runner that the job will run on
