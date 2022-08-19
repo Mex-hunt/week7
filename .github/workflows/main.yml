@@ -41,7 +41,6 @@ jobs:
       - name: build the node-app
         run: |
            npm build
-
            npm test
   push_to_Docker_Hub:
       # The type of runner that the job will run on
@@ -58,7 +57,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: obachimex/mynodeapp
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
