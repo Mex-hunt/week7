@@ -73,8 +73,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+         
       -    
        name: Run the image in a container
        uses: addnab/docker-run-action@v3
