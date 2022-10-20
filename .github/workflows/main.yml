@@ -46,7 +46,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: obachimex/mynodeapp2
+          images: obachimex/mynodeapp2:latest
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
