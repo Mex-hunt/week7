@@ -63,6 +63,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           
+          
       - 
         name: deploy the image in a container
         uses: addnab/docker-run-action@v3
@@ -71,5 +72,5 @@ jobs:
           run: |
             echo "runing the docker image"
             echo "Testing the nodejs  app endpoints"
-            echo ${{ steps.docker_build.containerimage.digest }}
+            echo ${{ steps.docker_build.outputs.digest }}
 
