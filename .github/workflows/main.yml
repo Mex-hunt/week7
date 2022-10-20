@@ -46,7 +46,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: obachimex/mynodeapp
+          images: obachimex/mynodeapp2
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -67,7 +67,7 @@ jobs:
         name: deploy the image in a container
         uses: addnab/docker-run-action@v3
         with:
-          image: obachimex/mynodeapp
+          image: obachimex/mynodeapp2
           run: |
             echo "runing the docker image"
             echo "Testing the nodejs  app endpoints"
